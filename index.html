@@ -47,13 +47,23 @@
         }
 
         .nav-brand {
-            display: flex;
-            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
         }
 
-        .nav-logo-img {
+        .nav-logo-right {
+            width: 45px;
             height: 45px;
-            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-logo-right img {
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -109,12 +119,13 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(201, 176, 55, 0.1);
-            border: 1px solid rgba(201, 176, 55, 0.3);
+            background: rgba(45, 42, 38, 0.08);
+            border: 1px solid rgba(45, 42, 38, 0.15);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
-            color: var(--gold);
+            color: var(--text-primary);
+            font-weight: 500;
             margin-bottom: 2rem;
         }
 
@@ -617,10 +628,10 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-brand">
-            <img src="logo-new.jpg" alt="Summer FOMO" class="nav-logo-img">
+        <div class="nav-brand">Summer FOMO</div>
+        <div class="nav-logo-right">
+            <img src="logo.png" alt="Noella Chase Designz">
         </div>
-        <a href="#pricing" class="nav-cta">Get Access — $27</a>
     </nav>
 
     <!-- Hero Section -->
