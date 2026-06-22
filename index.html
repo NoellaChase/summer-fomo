@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer FOMO — 25 Days of Permission to Not Have Fun</title>
+    <script src="https://js.stripe.com/v3/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -843,9 +844,44 @@
             <li>Private community access (optional)</li>
         </ul>
         <div class="price">$27<span>one-time</span></div>
-        <a href="#" class="btn-primary">Get Instant Access</a>
+        <button id="checkout-button" class="btn-primary">Get Instant Access — $27</button>
+        <div id="error-message" style="color: #e07a3d; margin-top: 1rem; display: none;"></div>
         <p class="guarantee">30-day money-back guarantee. If this doesn't make your summer feel lighter, I'll refund every penny.</p>
     </section>
+
+    <script>
+        const stripe = Stripe('pk_live_51TidufLwLXHuxt4i3owEFn1FXsvBoRI3O17Safxz05l6S1TFBznVltbISL0CMtoXJuJxMWO1ku9tkKtqMFU0rJ0T00kx9gRB85');
+        const checkoutButton = document.getElementById('checkout-button');
+        const errorMessage = document.getElementById('error-message');
+
+        checkoutButton.addEventListener('click', async () => {
+            checkoutButton.disabled = true;
+            checkoutButton.textContent = 'Loading...';
+            
+            try {
+                const response = await fetch('/api/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const session = await response.json();
+                
+                if (session.error) {
+                    throw new Error(session.error);
+                }
+
+                await stripe.redirectToCheckout({ sessionId: session.id });
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = 'Something went wrong. Please try again.';
+                errorMessage.style.display = 'block';
+                checkoutButton.disabled = false;
+                checkoutButton.textContent = 'Get Instant Access — $27';
+            }
+        });
+    </script>
 
     <!-- FAQ -->
     <section>
