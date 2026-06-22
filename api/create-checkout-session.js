@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       payment_method_types: ['card'],
       line_items: [{
         price_data: {
-          currency: 'usd',
+          currency: 'cad',
           product_data: {
             name: 'Summer FOMO: 25 Days of Permission to Not Have Fun',
             description: 'Digital calendar with 25 days of permission slips, templates, and guides'
