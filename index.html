@@ -204,6 +204,35 @@
             align-items: center;
         }
 
+        .btn-payment {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--orange) 0%, #e55a2b 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
+            min-width: 220px;
+        }
+
+        .btn-payment:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(255, 107, 53, 0.4);
+        }
+
+        .payment-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
         .hero-guarantee {
             font-size: 0.85rem;
             color: var(--text-muted);
@@ -665,8 +694,14 @@
         <p class="hero-subtitle">For women who are exhausted by "hot girl summer" and just want to exist without guilt.</p>
         <div class="hero-cta">
             <div class="payment-buttons">
-                <a href="YOUR_PAYPAL_LINK_HERE" class="btn-primary">Buy with PayPal — $27</a>
-                <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary">Buy with Card — $27</a>
+                <a href="YOUR_PAYPAL_LINK_HERE" class="btn-payment">
+                    <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.63l-1.496 9.478h2.79c.457 0 .85-.334.922-.788l.04-.19.73-4.627.047-.255a.933.933 0 0 1 .922-.788h.58c3.76 0 6.704-1.528 7.565-5.946.318-1.63.196-2.987-.507-3.679z"/></svg>
+                    Pay with PayPal
+                </a>
+                <a href="YOUR_STRIPE_LINK_HERE" class="btn-payment">
+                    <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                    Pay with Card
+                </a>
             </div>
             <p class="hero-guarantee">Instant download • 30-day money-back guarantee</p>
         </div>
@@ -855,8 +890,14 @@
         </ul>
         <div class="price">$27 CAD<span>one-time</span></div>
         <div class="payment-buttons" style="margin-bottom: 1.5rem;">
-            <a href="YOUR_PAYPAL_LINK_HERE" class="btn-primary">Buy with PayPal — $27</a>
-            <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary">Buy with Card — $27</a>
+            <a href="YOUR_PAYPAL_LINK_HERE" class="btn-payment">
+                <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.63l-1.496 9.478h2.79c.457 0 .85-.334.922-.788l.04-.19.73-4.627.047-.255a.933.933 0 0 1 .922-.788h.58c3.76 0 6.704-1.528 7.565-5.946.318-1.63.196-2.987-.507-3.679z"/></svg>
+                Pay with PayPal
+            </a>
+            <a href="YOUR_STRIPE_LINK_HERE" class="btn-payment">
+                <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                Pay with Card
+            </a>
         </div>
         <p class="guarantee">30-day money-back guarantee. If this doesn't make your summer feel lighter, I'll refund every penny.</p>
     </section>
@@ -895,8 +936,14 @@
         <h2>Summer Is Already Happening</h2>
         <p>Every day you wait is a day you could have spent without guilt. The pressure doesn't pause. But your permission to ignore it can start right now.</p>
         <div class="payment-buttons">
-            <a href="YOUR_PAYPAL_LINK_HERE" class="btn-primary">Buy with PayPal — $27</a>
-            <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary">Buy with Card — $27</a>
+            <a href="YOUR_PAYPAL_LINK_HERE" class="btn-payment">
+                <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.63l-1.496 9.478h2.79c.457 0 .85-.334.922-.788l.04-.19.73-4.627.047-.255a.933.933 0 0 1 .922-.788h.58c3.76 0 6.704-1.528 7.565-5.946.318-1.63.196-2.987-.507-3.679z"/></svg>
+                Pay with PayPal
+            </a>
+            <a href="YOUR_STRIPE_LINK_HERE" class="btn-payment">
+                <svg class="payment-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                Pay with Card
+            </a>
         </div>
     </section>
 
